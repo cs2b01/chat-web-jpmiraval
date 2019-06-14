@@ -9,7 +9,7 @@ class Manager:
     session = None
 
     def createEngine(self):
-        engine = create_engine('sqlite:///chat.db?check_same_thread=False', echo=False)
+        engine = create_engine('sqlite:///message.db?check_same_thread=False', echo=False)
         self.Base.metadata.create_all(engine)
         return engine
 
@@ -19,7 +19,6 @@ class Manager:
             session = Session()
 
         return session
-
 
 class AlchemyEncoder(json.JSONEncoder):
     def default(self, obj):

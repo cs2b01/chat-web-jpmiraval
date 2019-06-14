@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Chat - Desarrollo basado en Plataformas</title>
+
+    <!-- Custom fonts for this template-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link href="/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="/static/css/sb-admin-2.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <script src="chat.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  </head>
+  <body onload="whoami()">
+<h1>Chat</h1>
+    <table class="container" width="100%" border="1px solid">
+        <tr>
+            <td width="25%">
+                Usuarios
+                <div class="alert alert-primary" role="alert">
+                    <label id="cu_username"></label>
+                    <br/>
+                    <label id="cu_name"></label>
+                </div>
+                <div class="alert alert-success" role="alert" id="allusers">
+
+                </div>
+
+            </td>
+            <td width="75%">
+                Mensajes
+                <div id="messages">
+
+                </div>
+            </td>
+        </tr>
+    </table>
+
+     <table class="form imput">
+      <input id = "contenido" type="text" placeholder="mensajes"/>
+        <button onclick="sendMessage()">Enviar</button> </table>
+      <div id = "action" ></div>
+  <div id = "nombre_chat" style="visibility: 'hidden'"></div>
+  </body>
+</html>
