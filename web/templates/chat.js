@@ -47,8 +47,6 @@ function whoami(){
     }
 
     function loadMessages(user_from_id, user_to_id){
-            //alert(user_from_id);
-            //alert(user_to_id);
             blank();
 
 
@@ -60,7 +58,7 @@ function whoami(){
 
                 success: function(response){
                   var i = 0;
-document.getElementById("nombre_chat").innerHTML=user_to_id
+                document.getElementById("nombre_chat").innerHTML=user_to_id
                   $.each(response, function(){
                       f = '<div id='+i+'>';
                       f = f + response[i].content;
